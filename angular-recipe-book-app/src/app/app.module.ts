@@ -9,7 +9,8 @@ import {RecipeDetailComponent} from "./feature/recipes/recipe-detail/recipe-deta
 import {RecipesComponent} from './feature/recipes/recipes.component';
 import {ShoppingEditComponent} from "./feature/shopping-list/shopping-edit/shopping-edit.component";
 import {ShoppingListComponent} from "./feature/shopping-list/shopping-list.component";
-import { RecipeItemComponent } from './feature/recipes/recipe-list/recipe-item/recipe-item.component';
+import {RecipeItemComponent} from './feature/recipes/recipe-list/recipe-item/recipe-item.component';
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
     declarations: [
@@ -23,7 +24,8 @@ import { RecipeItemComponent } from './feature/recipes/recipe-list/recipe-item/r
         RecipeItemComponent
     ],
     imports: [
-        BrowserModule
+        BrowserModule,
+        NgOptimizedImage
     ],
     providers: [],
     bootstrap: [AppComponent]
