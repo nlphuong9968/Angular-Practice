@@ -11,6 +11,7 @@ import {ShoppingEditComponent} from "./feature/shopping-list/shopping-edit/shopp
 import {ShoppingListComponent} from "./feature/shopping-list/shopping-list.component";
 import {RecipeItemComponent} from './feature/recipes/recipe-list/recipe-item/recipe-item.component';
 import {NgOptimizedImage} from "@angular/common";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -25,7 +26,8 @@ import {NgOptimizedImage} from "@angular/common";
     ],
     imports: [
         BrowserModule,
-        NgOptimizedImage
+        NgOptimizedImage,
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]
