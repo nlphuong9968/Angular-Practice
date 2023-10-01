@@ -12,6 +12,7 @@ import {ShoppingListComponent} from "./feature/shopping-list/shopping-list.compo
 import {RecipeItemComponent} from './feature/recipes/recipe-list/recipe-item/recipe-item.component';
 import {NgOptimizedImage} from "@angular/common";
 import {FormsModule} from "@angular/forms";
+import { DropdownDirective } from './shared/directive/dropdown.directive';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import {FormsModule} from "@angular/forms";
         RecipeDetailComponent,
         HeaderComponent,
         RecipesComponent,
-        RecipeItemComponent
+        RecipeItemComponent,
+        DropdownDirective
     ],
     imports: [
         BrowserModule,
