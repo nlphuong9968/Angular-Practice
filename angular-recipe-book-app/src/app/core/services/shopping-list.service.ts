@@ -5,7 +5,9 @@ import {Ingredient} from "../../shared/models/ingredient.model";
     providedIn: 'root'
 })
 export class ShoppingListService {
-    ingredientAdded: EventEmitter<Ingredient> = new EventEmitter<Ingredient>();
+    // ingredientAdded: EventEmitter<Ingredient> = new EventEmitter<Ingredient>();
+    //the other way
+    ingredientsChanged: EventEmitter<Ingredient[]> = new EventEmitter<Ingredient[]>();
     ingredients: Ingredient[] = [
         new Ingredient('Apples', 5),
         new Ingredient('Tomatoes', 10)
@@ -16,5 +18,10 @@ export class ShoppingListService {
 
     getIngredient() {
         return this.ingredients.slice();
+    }
+
+    onAddedIngredient(ingredient: Ingredient) {
+        this.ingredients.push(ingredient);
+        this.ingredientsChanged.emit(this.ingredients.slice());
     }
 }
