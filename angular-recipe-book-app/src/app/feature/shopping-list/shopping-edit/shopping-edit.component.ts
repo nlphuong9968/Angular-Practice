@@ -21,7 +21,7 @@ export class ShoppingEditComponent {
 
         // this.shoppingListService.ingredientAdded.emit(newIngredient);
 
-        this.shoppingListService.onAddedIngredient(newIngredient);
+        this.shoppingListService.addedIngredient(newIngredient);
     }
 
 }
