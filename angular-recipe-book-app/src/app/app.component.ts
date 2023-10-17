@@ -8,11 +8,4 @@ import {RecipeService} from "./core/services/recipe.service";
     providers: [RecipeService]
 })
 export class AppComponent {
-    title = 'angular-recipe-book-app';
-
-    loadedFeature = 'recipe'
-
-    onNavigate(feature: string) {
-        this.loadedFeature = feature;
-    }
 }
