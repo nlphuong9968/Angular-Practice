@@ -3,13 +3,22 @@ import {RouterModule, Routes} from '@angular/router';
 
 import {RecipesComponent} from './feature/recipes/recipes.component';
 import {ShoppingListComponent} from './feature/shopping-list/shopping-list.component';
+import {RecipeStartComponent} from "./feature/recipes/recipe-start/recipe-start.component";
+import {RecipeDetailComponent} from "./feature/recipes/recipe-detail/recipe-detail.component";
 
 const appRoute: Routes = [
     {
         path: '', redirectTo: '/recipes', pathMatch: 'full'
     },
     {
-        path: 'recipes', component: RecipesComponent
+        path: 'recipes', component: RecipesComponent, children: [
+            {
+                path: '', component: RecipeStartComponent
+            },
+            {
+                path: ':id', component: RecipeDetailComponent
+            }
+        ]
     },
     {
         path: 'shopping-list', component: ShoppingListComponent
